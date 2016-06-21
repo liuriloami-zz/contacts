@@ -1,0 +1,185 @@
+
+body {
+    overflow: hidden;
+    background: #F5F5F5;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.btn:active {
+    box-shadow: none;
+}
+
+.navbar {
+    background: white;
+    margin: 0 0 0 300px;
+    height: 5.83rem;
+    box-shadow: none;
+}
+
+.navbar-form {
+    margin-left: -1.5rem;
+}
+
+.navbar-form input.form-control, .navbar-form button {
+    border-radius: 0;
+    height: 3.25rem;
+    margin: 0.25rem -5px 0 0;
+}
+
+.navbar-form input.form-control {
+    width: calc(100vw - 300px - 25rem);
+}
+
+.navbar-form button {
+    width: 3.5rem;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0;
+    background: #555 !important;
+    color: white !important;
+}
+
+.navbar-btn {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    width: 17rem;
+    font-size: 1.4rem;
+    border-radius: 0;
+}
+
+.navbar-btn i {
+    padding-right: 7px;
+}
+
+aside {
+    padding: 0;
+    background: #333;
+    color: white;
+    border-left: 10px solid #424242;
+    width: 300px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+aside ul {
+    padding: 0;
+}
+
+aside li {
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    color: #ddd !important;
+    padding: 1rem 3rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+aside button {
+    color: #ddd !important;
+}
+
+aside li:hover, aside li:focus {
+    background: #424242;
+}
+
+aside li.active {
+    background: #222;
+    border-left: 10px solid #337ab7;
+    margin-left: -10px;
+    width: calc(100% + 10px);
+}
+
+aside .brand {
+    color: #aaa;
+    font-size: 1.75rem;
+    display: block;
+    padding: 1.1rem;
+    text-align: center;
+    margin-left: -1rem;
+}
+
+aside .brand b {
+    color: white;
+    font-size: 2.5rem;
+}
+
+main {
+    margin-left: 300px;
+}
+
+main ul {
+    padding: 0;
+    list-style: none;
+    background: white;
+    margin: 1.5rem;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+main li {
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+main li:hover, main li:focus {
+    background: #f1f1f1;
+}
+
+main li span {
+    font-weight: normal;
+    position: absolute;
+    left: 200px;
+}
+
+main li button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    width: 4rem;
+    background: none;
+    color: #555;
+}
+
+button.cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 4rem);
+    height: 4rem;
+}
+
+button.option {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+}
+
+button.cover, button.option {
+    background: none;
+}
+
+.modal-sm {
+    width: 400px;
+}
+
+.modal-footer button {
+    width: 48%;
+}
