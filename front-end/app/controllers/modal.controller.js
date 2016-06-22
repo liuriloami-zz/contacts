@@ -21,8 +21,8 @@ function ModalController($scope, Modal, Data, $http) {
         .success(function(response, status) {
             Data.refreshCategories(response.categories);
             Data.refreshContacts(response.contacts);
+            Modal.closeAll();
         });
-        Modal.closeAll();
     };
 
     $scope.saveCategory = function() {
@@ -30,8 +30,8 @@ function ModalController($scope, Modal, Data, $http) {
         .success(function(response, status) {
             Data.refreshCategories(response.categories);
             Data.refreshContacts(response.contacts);
+            Modal.closeAll();
         });
-        Modal.closeAll();
     };
 
     $scope.confirmDeleteContact = function() {
@@ -42,8 +42,8 @@ function ModalController($scope, Modal, Data, $http) {
         $http.delete('http://54.233.113.143:4243/contact/' +  + $scope.data._id)
         .success(function(response, status) {
             Data.refreshContacts(response.contacts);
+            Modal.closeAll();
         });
-        Modal.closeAll();
     };
 
     $scope.saveContact = function() {
@@ -51,8 +51,8 @@ function ModalController($scope, Modal, Data, $http) {
         $http.post('http://54.233.113.143:4243/contact', { form: $scope.data })
         .success(function(response, status) {
             Data.refreshContacts(response.contacts);
+            Modal.closeAll();
         });
-        Modal.closeAll();
     };
 
     $scope.hasCategory = function(category) {
