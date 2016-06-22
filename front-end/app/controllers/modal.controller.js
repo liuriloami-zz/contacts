@@ -57,17 +57,19 @@ function ModalController($scope, Modal, Data, $http) {
 
     $scope.hasCategory = function(category) {
         for (var i = 0; i < $scope.data.categories.length; i++)
-            if ($scope.data.categories[i]._id == category._id)
+            if ($scope.data.categories[i] == category._id)
                 return true;
         return false;
     };
 
     $scope.toggleCategory = function(category) {
+        if (!$scope.data.categories)
+            $scope.data.categories = [];
         for (var i = 0; i < $scope.data.categories.length; i++)
-            if ($scope.data.categories[i]._id == category._id) {
+            if ($scope.data.categories[i] == category._id) {
                 $scope.data.categories.splice(i, 1);
                 return;
             }
-        $scope.data.categories.push(category);
+        $scope.data.categories.push(category._id);
     };
 }

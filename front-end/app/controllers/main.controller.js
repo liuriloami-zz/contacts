@@ -19,7 +19,7 @@ function MainController($scope, Modal, Data) {
 
     var hasCategory = function(list, _id) {
         for (var i = 0; i < list.length; i++)
-            if (list[i]._id == _id)
+            if (list[i] == _id)
                 return true;
         return false;
     };
