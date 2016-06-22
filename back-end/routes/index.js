@@ -38,6 +38,8 @@ router.post('/contact', wrap(function*(request, response, next) {
 
     contact.name = form.name;
     contact.email = form.email;
+    contact.tel = form.tel;
+console.log(form.categories);
     contact.categories = form.categories;
     contact.markModified('categories');
     yield contact.save();
@@ -46,10 +48,11 @@ router.post('/contact', wrap(function*(request, response, next) {
     response.send({
         contacts: contacts
     });
+    console.log(contact);
 }));
 
 router.delete('/contact/:id', wrap(function*(request, response, next) {
-    var _id = request.param.id;
+    var _id = request.params.id;
 
     yield Contact.remove({ _id: _id}).exec();
 
@@ -82,8 +85,7 @@ router.post('/category', wrap(function*(request, response, next) {
 }));
 
 router.delete('/category/:id', wrap(function*(request, response, next) {
-    var _id = request.param.id;
-
+    var _id = request.params.id;
     var removedCategory = yield Category.findOne({ _id: _id }).exec();
     if (removedCategory != null) {
         var contacts = yield Contact.find({ categories: removedCategory._id }).exec();

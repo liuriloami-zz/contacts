@@ -146,3 +146,11 @@ Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/b
     at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
     at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
     at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+
+> api@0.0.0 start /home/ubuntu/contacts/back-end
+> node ./bin/www
+
+
+> api@0.0.0 start /home/ubuntu/contacts/back-end
+> node ./bin/www
+
