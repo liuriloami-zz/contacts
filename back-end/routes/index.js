@@ -31,7 +31,7 @@ router.post('/contact', wrap(function*(request, response, next) {
     var contact = null;
 
     if (form._id)
-        contact = yield Contact.find({ _id: form._id }).exec();
+        contact = yield Contact.findOne({ _id: form._id }).exec();
 
     if (contact == null)
         contact = new Contact();
@@ -51,9 +51,7 @@ router.post('/contact', wrap(function*(request, response, next) {
 router.delete('/contact', wrap(function*(request, response, next) {
     var _id = request.body._id;
 
-    var removedContact = yield Contact.find({ _id: _id }).exec();
-    if (removedContact != null)
-        yield removedContact.remove().exec();
+    yield Contact.remove({ _id: _id}).exec();
 
     var contacts = yield Contact.find({}).exec();
 
@@ -67,15 +65,15 @@ router.post('/category', wrap(function*(request, response, next) {
     var category = null;
 
     if (form._id)
-        category = yield Category.find({ _id: form._id }).exec();
+        category = yield Category.findOne({ _id: form._id }).exec();
 
     if (category == null)
         category = new Category();
 
-    category.name = category.name;
+    category.name = form.name;
     yield category.save();
 
-    var contacts = yield Contacts.find({}).exec();
+    var contacts = yield Contact.find({}).exec();
     var categories = yield Category.find({}).exec();
     response.send({
         contacts: contacts,
@@ -86,15 +84,14 @@ router.post('/category', wrap(function*(request, response, next) {
 router.delete('/category', wrap(function*(request, response, next) {
     var _id = request.body._id;
 
-    var removedCategory = yield Category.find({ _id: _id }).exec();
+    var removedCategory = yield Category.findOne({ _id: _id }).exec();
     if (removedCategory != null) {
         var contacts = yield Contact.find({ categories: removedCategory._id }).exec();
         for (var i = 0; i < contacts.length; i++) {
-            contacts[i].categories = contacts[i].categories.filter(function(category) {
-                return category._id != removedCategory._id;
-            });
+            contacts[i].categories.remove(removedCategory);
+            yield contacts[i].save();
         }
-        yield removedCategory.remove().exec();
+        yield Category.remove({ _id: _id}).exec();
     }
 
     var contacts = yield Contact.find({}).exec();

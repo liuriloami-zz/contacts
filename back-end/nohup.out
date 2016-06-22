@@ -1,0 +1,148 @@
+
+> api@0.0.0 start /home/ubuntu/contacts/back-end
+> node ./bin/www
+
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[0mGET / [32m200 [0m15.358 ms - 31[0m
+[0mGET / [32m200 [0m2.925 ms - 31[0m
+{ [Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"]
+  view: 
+   View {
+     defaultEngine: 'ejs',
+     ext: '.ejs',
+     name: 'error',
+     root: '/home/ubuntu/contacts/back-end/views',
+     engine: [Function],
+     path: undefined } }
+{ [Error: Not Found] status: 404 }
+[0mPOST / [31m500 [0m51.152 ms - 1849[0m
+Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:67:7
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:271:10)
+    at done (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:55:9
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+{ [Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"]
+  view: 
+   View {
+     defaultEngine: 'ejs',
+     ext: '.ejs',
+     name: 'error',
+     root: '/home/ubuntu/contacts/back-end/views',
+     engine: [Function],
+     path: undefined } }
+[TypeError: Cannot read property '_id' of undefined]
+[0mPOST /contact [31m500 [0m2.565 ms - 1849[0m
+Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:67:7
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:271:10)
+    at done (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:55:9
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+{ [Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"]
+  view: 
+   View {
+     defaultEngine: 'ejs',
+     ext: '.ejs',
+     name: 'error',
+     root: '/home/ubuntu/contacts/back-end/views',
+     engine: [Function],
+     path: undefined } }
+{ [Error: Not Found] status: 404 }
+[0mPOST /contato [31m500 [0m2.316 ms - 1849[0m
+Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:67:7
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:271:10)
+    at done (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:55:9
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+{ [Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"]
+  view: 
+   View {
+     defaultEngine: 'ejs',
+     ext: '.ejs',
+     name: 'error',
+     root: '/home/ubuntu/contacts/back-end/views',
+     engine: [Function],
+     path: undefined } }
+[TypeError: Cannot read property '_id' of undefined]
+[0mPOST /contact [31m500 [0m1.329 ms - 1849[0m
+Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:67:7
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:271:10)
+    at done (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:55:9
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+[0mGET / [32m200 [0m3.154 ms - 31[0m
+{ [Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"]
+  view: 
+   View {
+     defaultEngine: 'ejs',
+     ext: '.ejs',
+     name: 'error',
+     root: '/home/ubuntu/contacts/back-end/views',
+     engine: [Function],
+     path: undefined } }
+[TypeError: Cannot read property '_id' of undefined]
+[0mPOST /contact [31m500 [0m3.827 ms - 1849[0m
+Error: Failed to lookup view "error" in views directory "/home/ubuntu/contacts/back-end/views"
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:67:7
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:271:10)
+    at done (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/home/ubuntu/contacts/back-end/node_modules/express/lib/response.js:961:7)
+    at /home/ubuntu/contacts/back-end/app.js:55:9
+    at Layer.handle_error (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:310:13)
+    at /home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/home/ubuntu/contacts/back-end/node_modules/express/lib/router/index.js:330:12)
