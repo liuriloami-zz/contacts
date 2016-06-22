@@ -5,16 +5,13 @@ var autoIncrement = require('mongoose-auto-increment');
 
 mongoose.plugin(slug);
 
-var connection = mongoose.createConnection('mongodb://localhost/projetovestibular');
+var connection = mongoose.createConnection('mongodb://localhost/contacts');
 autoIncrement.initialize(connection);
 
-require('./models/User.js');
+require('./models/Contact.js');
 require('./models/Category.js');
-require('./models/Content.js');
-require('./models/Exam.js');
-require('./models/Exercise.js');
 
-mongoose.connect('mongodb://localhost/projetovestibular');
+mongoose.connect('mongodb://localhost/contacts');
 
 var express = require('express');
 var path = require('path');

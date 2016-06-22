@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var wrap = require('co-express');
-var async = require('async');
 
 var mongoose = require('mongoose');
 var Contact = mongoose.model('Contact');
@@ -103,7 +102,7 @@ router.delete('/category', wrap(function*(request, response, next) {
 
     response.send({
         contacts: contacts,
-        categories: categories;
+        categories: categories
     });
 }));
 
