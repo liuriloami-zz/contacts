@@ -1,0 +1,22 @@
+<div class="modal fade" id="category-editor-modal" category-editor-modal>
+    <div class="modal-dialog modal-sm" ng-if="Modal.getTitle() == 'category-editor-modal'">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" ng-if="!data._id">Nova categoria</h4>
+                <h4 class="modal-title text-center" ng-if="data._id">Editar categoria</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome da categoria</label>
+                    <input type="text" class="form-control" placeholder="Nome da categoria" ng-value="data.name">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" ng-click="confirmDeleteCategory()" ng-if="data._id">Excluir</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-if="!data._id">Cancelar</button>
+                <button type="button" class="btn btn-primary" ng-click="saveCategory()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

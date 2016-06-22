@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var app = require('../app');
+var fs = require('fs');
+var http = require('http');
+
+var httpServer = http.createServer(app);
+
+httpServer.listen(2016);

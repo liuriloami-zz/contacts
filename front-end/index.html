@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="pt-br">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <title>Contatos Tokenlab</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-controller="MainController">
+        <div ng-controller="ModalController">
+            <div ng-include="'modals/contact-editor-modal.html'"></div>
+            <div ng-include="'modals/contact-delete-modal.html'"></div>
+            <div ng-include="'modals/category-editor-modal.html'"></div>
+            <div ng-include="'modals/category-delete-modal.html'"></div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                            <input type="text" class="form-control" ng-model="search">
+                        </div>
+                    </div>
+                </form>
+                <div class="nav navbar-nav navbar-right">
+                    <button class="btn btn-primary navbar-btn" ng-click="newContact()">Novo contato</button>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <div class="brand"><b>Contatos</b> tokenlab</div>
+            <ul ng-cloak>
+                <li ng-class="{ active: current_category == null }" ng-click="selectCategory(null)">Mostrar todas as categorias</li>
+                <li ng-repeat="category in categories" ng-class="{ active: current_category == category._id }">{{ category.name }}
+                    <button class="btn cover" ng-click="selectCategory(category)"></button>
+                    <button class="btn option" ng-click="editCategory(category)"><i class="fa fa-pencil"></i></button>
+                </li>
+                <li ng-click="newCategory()"><b>Criar nova categoria</b></li>
+            </ul>
+        </aside>
+        <main>
+            <ul ng-cloak>
+                <li ng-repeat="contact in filteredContacts()">
+                    <div class="name">{{ contact.name }}</div>
+                    <div class="email">{{ contact.email }}</div>
+                    <button class="btn cover" ng-click="editContact(contact)"></button>
+                    <button class="btn option" ng-click="confirmDeleteContact(contact)"><i class="fa fa-times"></i></button>
+                </li>
+            </ul>
+        </main>
+        <script src="https://use.fontawesome.com/da60bd504f.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.8/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.8/angular-cookies.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.8/angular-route.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
