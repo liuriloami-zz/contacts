@@ -48,8 +48,8 @@ router.post('/contact', wrap(function*(request, response, next) {
     });
 }));
 
-router.delete('/contact', wrap(function*(request, response, next) {
-    var _id = request.body._id;
+router.delete('/contact/:id', wrap(function*(request, response, next) {
+    var _id = request.param.id;
 
     yield Contact.remove({ _id: _id}).exec();
 
@@ -81,8 +81,8 @@ router.post('/category', wrap(function*(request, response, next) {
     });
 }));
 
-router.delete('/category', wrap(function*(request, response, next) {
-    var _id = request.body._id;
+router.delete('/category/:id', wrap(function*(request, response, next) {
+    var _id = request.param.id;
 
     var removedCategory = yield Category.findOne({ _id: _id }).exec();
     if (removedCategory != null) {

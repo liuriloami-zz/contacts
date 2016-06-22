@@ -2,26 +2,20 @@ angular
     .module('app')
     .controller('MainController', MainController);
 
-MainController.$inject = ['$scope', 'Modal'];
+MainController.$inject = ['$scope', 'Modal', 'Data'];
 
-function MainController($scope, Modal) {
+function MainController($scope, Modal, Data) {
+    $scope.Data = Data;
     $scope.current_category = null;
     $scope.search = '';
 
-    $scope.categories = [
-        { _id: 0, name: 'Família' },
-        { _id: 1, name: 'São Carlos' },
-        { _id: 3, name: 'Intercâmbio' },
-        { _id: 2, name: 'Águas de Lindoia' }
-    ];
+    $scope.$watch('Data.getCategories()', function(categories) {
+        $scope.categories = categories;
+    }, true);
 
-    $scope.contacts = [
-        { _id: 0, name: 'Liuri Loami Ruyz Jorge', email: 'liuriloami@gmail.com', categories: [] },
-        { _id: 1, name: 'Anna Flávia Zimmermann Brandão', email: 'annaflaviaz@gmail.com', categories: [] },
-        { _id: 2, name: 'Matheus Connolyn', email: 'connolyn27@gmail.com', categories: [] },
-        { _id: 3, name: 'Girselia Ruyz Jorge', email: 'girseliaruyz@hotmail.com', categories: [] },
-        { _id: 4, name: 'Mateus Frederico de Paula', email: 'mateusfpaula@gmail.com', categories: [] }
-    ];
+    $scope.$watch('Data.getContacts()', function(contacts) {
+        $scope.contacts = contacts;
+    }, true);
 
     var hasCategory = function(list, _id) {
         for (var i = 0; i < list.length; i++)

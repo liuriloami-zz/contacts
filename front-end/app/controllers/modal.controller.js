@@ -2,10 +2,10 @@ angular
     .module('app')
     .controller('ModalController', ModalController);
 
-ModalController.$inject = ['$scope', 'Modal'];
+ModalController.$inject = ['$scope', 'Modal', 'Data', '$http'];
 
-function ModalController($scope, Modal) {
-    $scope.data = {};
+function ModalController($scope, Modal, Data, $http) {
+    $scope.Data = Data;
     $scope.Modal = Modal;
 
     $scope.$watch('Modal.getData()', function(data) {
@@ -17,10 +17,20 @@ function ModalController($scope, Modal) {
     };
 
     $scope.deleteCategory = function() {
+        $http.delete('http://54.233.113.143:4243/category/' + $scope.data._id)
+        .success(function(response, status) {
+            Data.refreshCategories(response.categories);
+            Data.refreshContacts(response.contacts);
+        });
         Modal.closeAll();
     };
 
     $scope.saveCategory = function() {
+        $http.post('http://54.233.113.143:4243/category', { form: $scope.data })
+        .success(function(response, status) {
+            Data.refreshCategories(response.categories);
+            Data.refreshContacts(response.contacts);
+        });
         Modal.closeAll();
     };
 
@@ -28,11 +38,20 @@ function ModalController($scope, Modal) {
         Modal.open('contact-delete-modal', $scope.data);
     };
 
-    $scope.deleteCategory = function() {
+    $scope.deleteContact = function() {
+        $http.delete('http://54.233.113.143:4243/contact/' +  + $scope.data._id)
+        .success(function(response, status) {
+            Data.refreshContacts(response.contacts);
+        });
         Modal.closeAll();
     };
 
     $scope.saveContact = function() {
+        console.log($scope.data);
+        $http.post('http://54.233.113.143:4243/contact', { form: $scope.data })
+        .success(function(response, status) {
+            Data.refreshContacts(response.contacts);
+        });
         Modal.closeAll();
     };
 
